@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover user-scalable=no">
+    <title>Chimbuchi Victory | BUVIM® TECHNOLOGIES</title>
+    <meta name="description"
+        content="Chimbuchi Victory - Enterprise Web Architect & Cybersecurity Specialist. Award-winning solutions in web design and ethical hacking.">
+    <meta name="keywords"
+        content="web development, ethical hacking, cybersecurity, fullstack development, secure architecture">
+    <meta name="author" content="Chimbuchi Victory">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; frame-src 'none'; object-src 'none';">
+    <link rel="icon" href="download.png" type="image/x-icon">
+    <!-- Premium Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,700&display=swap" rel="stylesheet">
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4BGRW1NF5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F4BGRW1NF5');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 50%, #6366f1 100%);
+            --cyber-teal: #2dd4bf;
+        }
+
+        body {
+            font-family: 'General Sans', sans-serif;
+            background: #0a0a0a;
+            color: #f8fafc;
+        }
+
+        .brand-font {
+            font-family: 'General Sans', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        .cyber-glow {
+            text-shadow: 0 0 35px rgba(45, 212, 191, 0.3);
+        }
+
+        .holographic-border {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.5rem;
+        }
+
+        .holographic-border::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: var(--primary-gradient);
+            z-index: -1;
+            animation: rotate 8s linear infinite;
+            mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .mobile-menu {
+            transform: translateY(-150%);
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+        }
+
+        .cyber-button {
+            background: linear-gradient(145deg, #0f172a, #1e293b);
+            border: 1px solid rgba(45, 212, 191, 0.3);
+            box-shadow: 0 4px 24px rgba(15, 118, 110, 0.15);
+        }
+
+        .cyber-button:hover {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            box-shadow: 0 6px 32px rgba(15, 118, 110, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-[#0a0a0a] antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black/95 backdrop-blur-2xl z-50 border-b border-cyan-900/30">
+        <div class="container mx-auto px-4 sm:px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center space-x-3 group">
+                    <svg width="42" height="42" viewBox="0 0 64 64" class="text-cyan-400 transition-transform duration-500 hover:rotate-180">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#2563eb" />
+                                <stop offset="100%" stop-color="#2dd4bf" />
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#logoGradient)" d="M32 2.5l28.5 28.5L32 59.5 3.5 31 32 2.5zm0 4.8L8.3 31 32 54.7 55.7 31 32 7.3z" />
+                        <path fill="none" stroke="#fff" stroke-width="2" d="M24 24l16 16m0-16L24 40" />
+                        <circle cx="32" cy="32" r="6" fill="#4f46e5" />
+                    </svg>
+                    <span class="brand-font text-2xl gradient-text cyber-glow">
+                        BUVIM<span class="text-xs align-top">®</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="#expertise" class="px-3 py-2 font-medium hover:text-cyan-400 transition-colors duration-300">Expertise</a>
+                    <a href="#work" class="px-3 py-2 font-medium hover:text-cyan-400 transition-colors duration-300">Work</a>
+                    <a href="#contact" class="cyber-button px-6 py-2.5 rounded-full transition-all duration-300 flex items-center gap-2">
+                        <i class="fas fa-envelope text-sm"></i>
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button id="mobileToggle" class="lg:hidden p-2 text-slate-300 hover:text-cyan-400 transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu lg:hidden absolute w-full bg-black/98 backdrop-blur-2xl border-b border-cyan-900/30">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex flex-col space-y-4 text-center">
+                    <a href="#expertise" class="py-3  hover:text-cyan-400 transition-colors">Expertise</a>
+                    <a href="#work" class="py-3 hover:text-cyan-400 transition-colors">Work</a>
+                    <a href="#contact" class="py-3 cyber-button rounded-lg">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center pt-24 pb-16">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8" data-aos="fade-right">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight brand-font">
+                        <span class="gradient-text cyber-glow">Chimbuchi</span>
+                        <span class="block gradient-text cyber-glow">Victory</span>
+                        <span class="block text-xl sm:text-2xl mt-6 text-slate-400 font-normal">
+                            Web developer | UI/UX Designer | Tech Ethusiast.
+                        </span>
+                    </h1>
+                    <p class="text-lg text-slate-400 leading-relaxed max-w-2xl">
+                        Crafting secure digital experiences through innovative web architecture and
+                        <span class="text-cyan-400">ethical cybersecurity solutions</span>.
+                        Merging aesthetic design with military-grade security protocols.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                        <a href="#contact" class="cyber-button px-8 py-4 rounded-lg font-medium flex items-center gap-2">
+                            <i class="fas fa-briefcase"></i>
+                            Hire Me
+                        </a>
+                        <a href="#work" class="px-8 py-4 border border-cyan-400/20 hover:border-cyan-400/40 rounded-lg transition-all duration-300 flex items-center gap-2">
+                            <i class="fas fa-folder-open"></i>
+                            View Portfolio
+                        </a>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 blur-[100px]"></div>
+                    <div class="relative bg-black/50 rounded-3xl p-1 holographic-border">
+                        <div class="bg-[#0a0a0a] rounded-2xl p-8">
+                            <div class="grid grid-cols-2 gap-5">
+                                <div class="p-6 bg-white/5 rounded-xl backdrop-blur-sm hover:bg-white/10 transition-colors duration-300 border border-cyan-900/20">
+                                    <i class="fas fa-laptop-code text-3xl text-cyan-400 mb-4"></i>
+                                    <h3 class="text-lg font-semibold mb-3">Web Design</h3>
+                                    <p class="text-sm text-slate-400 leading-relaxed">
+                                        User-centric interfaces with atomic design principles
+                                    </p>
+                                </div>
+                                <div class="p-6 bg-white/5 rounded-xl backdrop-blur-sm hover:bg-white/10 transition-colors duration-300 border border-cyan-900/20">
+                                    <i class="fas fa-user-secret text-3xl text-purple-400 mb-4"></i>
+                                    <h3 class="text-lg font-semibold mb-3">Ethical Hacking</h3>
+                                    <p class="text-sm text-slate-400 leading-relaxed">
+                                        Penetration testing & vulnerability assessment
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="expertise" class="py-24 bg-slate-800/30">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Technical Expertise</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Frontend Development -->
+                <div class="bg-slate-800/50 p-8 rounded-2xl transition-all hover:bg-slate-700/30" data-aos="zoom-in">
+                    <div class="text-emerald-400 text-4xl mb-6">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Frontend Engineering</h3>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-emerald-400 mr-2"></i>
+                            React & Next.js
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-emerald-400 mr-2"></i>
+                            TypeScript Mastery
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-emerald-400 mr-2"></i>
+                            WebGL & Animations
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Backend Development -->
+                <div class="bg-slate-800/50 p-8 rounded-2xl transition-all hover:bg-slate-700/30" data-aos="zoom-in">
+                    <div class="text-indigo-400 text-4xl mb-6">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Backend Architecture</h3>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-2"></i>
+                            Node.js & Python
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-2"></i>
+                            Microservices Design
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-2"></i>
+                            REST & GraphQL APIs
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="bg-slate-800/50 p-8 rounded-2xl transition-all hover:bg-slate-700/30" data-aos="zoom-in">
+                    <div class="text-purple-400 text-4xl mb-6">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Cybersecurity</h3>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                            Penetration Testing
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                            Network Security
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                            Cryptography
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-24 bg-slate-900/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Recent Projects</h2>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Project 1 -->
+                <div class="group relative" data-aos="fade-right">
+                    <div class="relative bg-slate-800 rounded-2xl overflow-hidden transform transition-all hover:scale-[1.02]">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800"
+                            alt="Cybersecurity Project" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-semibold mb-4">Secure Banking Portal</h3>
+                            <p class="text-slate-400 mb-6">Financial services platform with military-grade encryption</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm">AES-256</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative" data-aos="fade-left">
+                    <div class="relative bg-slate-800 rounded-2xl overflow-hidden transform transition-all hover:scale-[1.02]">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800"
+                            alt="E-commerce Security" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-semibold mb-4">E-commerce Security Suite</h3>
+                            <p class="text-slate-400 mb-6">PCI-DSS compliant payment infrastructure</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm">Next.js</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm">Pen Testing</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm">OWASP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <div class="bg-slate-800/50 p-8 md:p-12 rounded-2xl backdrop-blur-xl" data-aos="zoom-in">
+                <h2 class="text-4xl font-bold text-center mb-12">Let's Collaborate</h2>
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" name="name" placeholder="Name" required
+                               class="w-full px-4 py-3 bg-slate-900 rounded-lg border border-slate-700 focus:ring-2 focus:ring-emerald-500">
+                        <input type="email" name="email" placeholder="Email" required
+                               class="w-full px-4 py-3 bg-slate-900 rounded-lg border border-slate-700 focus:ring-2 focus:ring-emerald-500">
+                    </div>
+                    <textarea rows="5" name="message" placeholder="Project Details" required
+                              class="w-full px-4 py-3 bg-slate-900 rounded-lg border border-slate-700 focus:ring-2 focus:ring-emerald-500"></textarea>
+                    <button type="submit" class="w-full bg-teal-700 hover:bg-teal-900 px-8 py-4 rounded-lg font-medium transition-colors">
+                        Send Message
+                    </button>
+                    <div id="form-message" class="text-center text-white mt-4"></div> <!-- Success/Error Message Container -->
+                </form>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-black/95 py-16 border-t border-cyan-900/30 mt-32">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-5 gap-8">
+                <div class="md:col-span-2 space-y-6">
+                    <div class="flex items-center space-x-2">
+                        <svg width="32" height="32" viewBox="0 0 64 64" class="text-cyan-400">
+                            <path fill="currentColor" d="M32 2.5l28.5 28.5L32 59.5 3.5 31 32 2.5zm0 4.8L8.3 31 32 54.7 55.7 31 32 7.3z"/>
+                            <path fill="none" stroke="#fff" stroke-width="2" d="M24 24l16 16m0-16L24 40"/>
+                        </svg>
+                        <span class="brand-font text-lg gradient-text">BUVIM<span class="text-xs align-top">®</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed pr-8">
+                        Pioneering secure digital transformation through cutting-edge web solutions 
+                        and ethical security practices. ISO 27001 certified.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-lg font-semibold brand-font">Operations</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li class="hover:text-cyan-400 transition-colors">
+                            <a href="#expertise">Web Architecture</a>
+                        </li>
+                        <li class="hover:text-cyan-400 transition-colors">
+                            <a href="#work">Security Audits</a>
+                        </li>
+                        <li class="hover:text-cyan-400 transition-colors">
+                            <a href="#contact">Consulting</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-lg font-semibold brand-font">Connect</h4>
+                    <div class="flex space-x-3">
+                        
+                        <a href="https://linkedin.com/in/chimbuchi-victory-916a00351" target="_blank" rel="noopener" class="p-2.5 bg-white/5 rounded-lg hover:bg-cyan-400/20 transition-colors">
+                            <i class="fab fa-linkedin-in text-lg"></i>
+                        </a>
+                        <a href="https://twitter.com/degrizz__" target="_blank" rel="noopener" class="p-2.5 bg-white/5 rounded-lg hover:bg-cyan-400/20 transition-colors">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/de__grizz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="p-2.5 bg-white/5 rounded-lg hover:bg-cyan-400/20 transition-colors">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/search?q=de__grizz&t=1739882498964" target="_blank" rel="noopener" class="p-2.5 bg-white/5 rounded-lg hover:bg-cyan-400/20 transition-colors">
+                            <i class="fab fa-tiktok text-lg"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-lg font-semibold brand-font">Location</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li class="hover:text-cyan-400 transition-colors">
+                            <a href="#" rel="noopener">Anambra, Nigeria</a>
+                        </li>
+                        <li class="hover:text-cyan-400 transition-colors">
+                            <a href="#" rel="noopener"> San Francisco, USA</a>
+                        </li>
+                        <li class="hover:text-cyan-400 transition-colors">
+                            <a href="#" rel="noopener">Berlin, Germany</a>
+                        </li>
+                        <li class="hover:text-cyan-400 transition-colors">
+                            <a href="#" rel="noopener">Dubai, UAE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-cyan-900/30 mt-12 pt-8 text-center">
+                <p class="text-slate-400 text-sm">
+                    © 2025 BUVIM® TECHNOLOGIES. All rights reserved.<br>
+                    <span class="mt-1 block text-xs opacity-70">PCI-DSS Compliant | GDPR Ready</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced Mobile Menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let menuOpen = false;
+
+        mobileToggle.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            mobileMenu.classList.toggle('active');
+            mobileToggle.setAttribute('aria-expanded', menuOpen);
+        });
+
+        // Enhanced Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                if(window.innerWidth < 1024) {
+                    mobileMenu.classList.remove('active');
+                    menuOpen = false;
+                }
+            });
+        });
+
+        // Touch Device Detection
+        function isTouchDevice() {
+            return 'ontouchstart' in window || navigator.maxTouchPoints;
+        }
+
+        // Hover Effects for Touch Devices
+        if(isTouchDevice()) {
+            document.querySelectorAll('.hover\\:bg-white\\/10').forEach(element => {
+                element.classList.remove('hover:bg-white/10');
+            });
+        }
+
+        document.getElementById("contact-form").addEventListener("submit", async function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const form = event.target;
+    const formData = new FormData(form);
+    const messageBox = document.getElementById("form-message");
+
+    // Convert FormData to JSON
+    const formObject = {};
+    formData.forEach((value, key) => { formObject[key] = value; });
+
+    try {
+        const response = await fetch("https://formspree.io/f/xkgoplaj", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formObject) // Send data as JSON
+        });
+
+        if (response.ok) {
+            messageBox.innerHTML = "<p class='text-green-500 font-semibold'>Thanks! The form was submitted successfully.</p>";
+            form.reset(); // ✅ Clears input fields after successful submission
+        } else {
+            messageBox.innerHTML = "<p class='text-red-500 font-semibold'>Oops! Something went wrong. Please try again.</p>";
+        }
+    } catch (error) {
+        messageBox.innerHTML = "<p class='text-red-500 font-semibold'>Network error! Please check your connection.</p>";
+    }
+
+    // ✅ Clears the message after 5 seconds
+    setTimeout(() => { messageBox.innerHTML = ""; }, 5000);
+});
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            mirror: false,
+            easing: 'ease-out-quart',
+            offset: 120
+        });
+    </script>
+</body>
+</html>
